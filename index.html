@@ -1,0 +1,119 @@
+﻿<!--
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+-->
+<html>
+<head>
+    <title> My First Page</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700|Open+Sans:700,600,700&display=swap' rel='stylesheet'>
+
+    <style>
+        #discord {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-filter: drop-shadow(5px 5px 5px #4682B4);
+            filter: drop-shadow(5px 5px 5px #4682B4);
+        }
+
+        body {
+            background-color: #4b2a45;
+        }
+
+        .container {
+            text-align: center;
+            color: #282525;
+            text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            font-family: 'Raleway', sans-serif;
+        }
+
+
+        #demo {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Raleway', sans-serif;
+            font-size: 80px;
+            color: #fff;
+        }
+
+        .rotate {
+            animation: rotation 18s infinite linear;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(2000deg);
+            }
+
+        }
+    </style>
+    <script>
+        var btn = document.getElementById('hello_world');
+
+        var flag = false;
+
+        function playAudio(url) {
+
+            if (!flag) {
+                var audio = new Audio(url);
+
+                audio.loop = true;
+                audio.play();
+                flag = true;
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+    <div class="container">
+
+        <div id="discord">
+            <img src="images/ds1.png" class="rotate" width=80% height=auto>
+        </div>
+
+        <div id="hello_world">
+            <div class="centered">
+                <h1 onclick="playAudio('images/song.mp3')">Позвонить</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <p id="demo"></p>
+    <script>
+
+        document.getElementById("discord").addEventListener("click", function () {
+            document.getElementById("demo").innerHTML = "Не звони сюда";
+        });
+    </script>
+
+</body>
+</html>
