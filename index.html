@@ -1,124 +1,48 @@
-﻿<!--
-<!DOCTYPE html>
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 
-</body>
-</html>
--->
-<html>
-<head>
-    <title> My First Page</title>
+  font-family: sans-serif;
+}
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700|Open+Sans:700,600,700&display=swap' rel='stylesheet'>
+.square {
+  position: relative;
 
-    <style>
-        #discord {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-filter: drop-shadow(5px 5px 5px #4682B4);
-            filter: drop-shadow(5px 5px 5px #4682B4);
-        }
+  width: 100px;
+  height: 100px;
 
-        body {
-            background-color: #4b2a45;
-        }
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
 
-        .container {
-            text-align: center;
-            color: #282525;
-            text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
-            animation: 3s linear infinite rotate;
-            transform-origin: left top;
-        }
+  background: #03a9f4;
+  
+  animation: 3s linear infinite rotate;
+  transform-origin: left top;
+}
 
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            cursor: pointer;
-            font-family: 'Raleway', sans-serif;
-        }
+.pivont-point {
+  position: absolute;
+  top: 0;
+  left: 0;
 
+  color: #363636;
+  font-size: 30px;
 
-        #demo {
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: 'Raleway', sans-serif;
-            font-size: 80px;
-            color: #fff;
-        }
+  transform: translate(-50%, -50%);
+}
 
-        .rotate {
-            animation: 3s linear infinite rotate;
-            transform-origin: left top;
-        }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
 
-        @keyframes rotation {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-
-        }
-    </style>
-    <script>
-        var btn = document.getElementById('hello_world');
-
-        var flag = false;
-
-        function playAudio(url) {
-
-            if (!flag) {
-                var audio = new Audio(url);
-
-                audio.loop = true;
-                audio.play();
-                flag = true;
-            }
-        }
-    </script>
-</head>
-<body>
-
-
-    <div class="container">
-
-        <div id="discord">
-            <img src="images/ds1.png" class="rotate" width=80% height=auto>
-            
-      <!--  </div>
- надпись
-        <div id="hello_world">
-            <div class="centered">
-                <h1 onclick="playAudio('images/song.mp3')">Позвонить</h1>
-            </div>
-        </div>
-
-    </div>
-
-    <p id="demo"></p>
-  <!--  <script>
-
-        document.getElementById("discord").addEventListener("click", function () {
-            document.getElementById("demo").innerHTML = "Не звони сюда";
-        });  -->
-    </script>
-
-
-</body>
-</html>
+  to {
+    transform: rotate(360deg);
+  }
+}
