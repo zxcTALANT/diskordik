@@ -7,6 +7,16 @@
   
   
   <style>  
+      #discord {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-filter: drop-shadow(5px 5px 5px #4682B4);
+            filter: drop-shadow(5px 5px 5px #4682B4);
+        }
 
     
 body {
@@ -22,11 +32,7 @@ body {
 }
 
 .square {
-    position: relative;
-    width: 100px;
-    height: 100px;
 
-    background: #03a9f4;
     animation: 3s linear infinite rotate;
     transform-origin: left top;
 }
